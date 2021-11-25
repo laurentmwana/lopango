@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Tests\\cacheTest::testCacheValue":4,"Tests\\cacheTest::testCacheDelete":4,"Warning":6},"times":{"Tests\\cacheTest::testCacheValue":0.017,"Tests\\cacheTest::testCacheDelete":0,"Tests\\apptest::testDeleteSlashUri":0.015,"Tests\\appTest::testDeleteSlashUri":0.008,"Warning":0.047}}
