@@ -1,11 +1,13 @@
 <?php
 
-
 namespace Controller;
 
 use Framework\Exceptions\ValidatorException;
-use interfaces\ValidatorInterface;
+use interfaces\Forms\ValidatorInterface;
 
+/**
+ * Validator, pour faire de validation
+ */
 class Validator  implements ValidatorInterface
 {
     /**
@@ -25,7 +27,9 @@ class Validator  implements ValidatorInterface
 
     /**
      * Validator Constructor 
+     * 
      * @param array $posts
+     * @param array $errors
      */
     public function __construct(array $posts)
     {
@@ -74,7 +78,7 @@ class Validator  implements ValidatorInterface
     {
         if (!preg_match($regex, $this->field($name))){
             $value = isset($this->label['regex'][$name]) ? $this->label['regex'][$name] : $name . " n'est pas valide";
-            $this->errors[$name] = $value;
+            $this->errors['error'][$name] = $value;
         }
     }
 
@@ -92,7 +96,7 @@ class Validator  implements ValidatorInterface
                 $value = $name . ' est requiet';
             }
 
-            $this->errors[$name] = $value;
+            $this->errors['error'][$name] = $value;
         }
     }
 

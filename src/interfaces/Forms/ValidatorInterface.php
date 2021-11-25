@@ -1,12 +1,13 @@
 <?php
 
-namespace interfaces;
+namespace interfaces\Forms;
 
-
+/**
+ *  validator interface
+ */
 interface ValidatorInterface
 {
     
-  
     /**
      * @param string $action
      * @param string $name

@@ -1,14 +1,15 @@
 <?php
 
+
 $form = new \Controller\HTML\Forms($_POST);
-
-
-
+$alert = new \Controller\HTML\Alert($posts);
 ?>
 <div class="ui sizer vertical segment">
   <div class="ui huge header">Nouveau My lopango</div>
   <p>Je veux ajouter un nouveau lopango (:</p>
 </div>
+
+<?= $alert->getDanger()  ?>
 
 <div class="ui two column grid">
     <div class="column"></div>
@@ -26,9 +27,3 @@ $form = new \Controller\HTML\Forms($_POST);
         <div class="column"></div>
     </div>
 </div>
-
-
-<?php
-
-
-var_dump($_POST);

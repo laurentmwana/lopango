@@ -6,6 +6,7 @@
             "Framework\\": "src/Framework",
             "Controller\\": "src/Controller",
             "interfaces\\": "src/interfaces",
+            "Session\\": "src/Session",
             "Tests\\": "Tests"
         }
     },

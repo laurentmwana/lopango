@@ -55,6 +55,7 @@ class ComposerStaticInit40719817dc02234dab26340ff0b27b69
             'Symfony\\Component\\Filesystem\\' => 29,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
+            'Session\\' => 8,
         ),
         'P' => 
         array (
@@ -154,6 +155,10 @@ class ComposerStaticInit40719817dc02234dab26340ff0b27b69
         'Symfony\\Component\\Config\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/config',
+        ),
+        'Session\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Session',
         ),
         'Psr\\SimpleCache\\' => 
         array (

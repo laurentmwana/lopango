@@ -2,7 +2,7 @@
 
 namespace Controller\Post;
 
-use interfaces\PostControllerInterface;
+use interfaces\Forms\PostControllerInterface;
 
 class PostController implements PostControllerInterface
 {
@@ -26,11 +26,10 @@ class PostController implements PostControllerInterface
     {
 
         if (isset($this->posts['save'])) {
-            
-            var_dump($this->posts);
+
             $v = new \Controller\Validator($this->posts);
 
-            $v->label('name', 'Le champs  adresse n\'estpas valide', 'regex');
+            $v->label('name', 'Le champs  nom de lopango n\'est pas valide', 'regex');
             $v->label('respons', 'Le champs  responsable n\'est pas valide', 'regex');
             $v->label('porte', 'Le champs  porte n\'est pas valide', 'regex');
             $v->label('adress', 'Le champs  adresse n\'est pas valide', 'regex');
@@ -52,7 +51,7 @@ class PostController implements PostControllerInterface
             $v->rule('required', 'adress');
         
             if ($v->validate()) {
-                # code...
+                \Session\flash\FlashSession::SESSION()->setSession('green', "Lopango ajouter avec succes ");
             }
 
             return $v->getMessage();
